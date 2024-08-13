@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Button } from '@twilio-paste/core/button';
 
 // Example of a component whose state is managed by a parent component
 // It has no local state of its own other than any state that is passed to it
@@ -15,13 +16,13 @@ const StatelessButtonList = ({
     return (
       <>
         <li>
-          <button onClick={increment}>increment</button>
+          <Button variant="secondary" onClick={increment}>increment</Button>
         </li>
         <li>
-          <button onClick={decrement}>decrement</button>
+        <Button variant="secondary" onClick={decrement}>decrement</Button>
         </li>
         <li>
-          <button onClick={reset}>reset</button>
+        <Button variant="secondary" onClick={reset}>reset</Button>
         </li>
       </>
     );

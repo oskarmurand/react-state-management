@@ -17,7 +17,7 @@ const UseStateListRender = () => (
   </>
 );
 
-export const LocalStatePage = () => {
+const LocalStatePage = () => {
   const [showList, setShowList] = React.useState(false);
   const toggleList = () => setShowList(!showList);
   return (
@@ -33,3 +33,5 @@ export const LocalStatePage = () => {
     </>
   );
 };
+
+export default LocalStatePage;

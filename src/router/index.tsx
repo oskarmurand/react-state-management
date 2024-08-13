@@ -1,17 +1,39 @@
-
-
 import { createBrowserRouter } from "react-router-dom";
-import App from '../App'
-import { LocalStatePage } from "../pages/localState";
+import LocalStatePage from "../pages/LocalState";
+import Layout from "../pages/Layout";
+import Context from "../pages/Context";
+import Reducer from "../pages/Reducer";
+import ReduxPage from "../pages/ReduxPage";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/local-state",
-    element: <LocalStatePage />,
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <>Homepage</>,
+      },
+      {
+        path: "/local-state",
+        element: <LocalStatePage />,
+      },
+      {
+        path: "/context",
+        element: <Context />,
+      },
+      {
+        path: "/reducer",
+        element: <Reducer />,
+      },
+      {
+        path: '/redux',
+        element: <ReduxPage />
+      },
+      {
+        path: "*",
+        element: <h1>Not Found</h1>,
+      },
+    ],
   },
 ]);
 
